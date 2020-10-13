@@ -1,0 +1,108 @@
+// Sækja config
+@import './config';
+
+.grid{
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+// Hér skal nota scss @for til að ítra út klösum fyrir grid
+@for $i from 1 through 3 {
+    .col-#{$i} {
+        width: (8.333333333% * $i) + (0.000000001%);
+    }
+}
+@for $i from 4 through 7 {
+    .col-#{$i} {
+        width: (8.333333333% * $i) + (0.000000002%);
+    }
+}
+@for $i from 8 through 10 {
+    .col-#{$i} {
+        width: (8.333333333% * $i) + (0.000000003%);
+    }
+}
+@for $i from 11 through 12 {
+    .col-#{$i} {
+        width: (8.333333333% * $i) + (0.000000004%);
+    }
+}
+@for $i from 1 through 3 {
+    .offset-col-#{$i} {
+        @if ($i == 1 or $i == 2) {
+            width: 8.333333333% * $i;
+        }@else if ($i % 3 == 0){
+            width: (8.333333333% *$i) + (0.000000001%);
+        }
+    }
+}
+@media (max-width: 799px) {
+    @for $i from 1 through 3 {
+        .col-md-#{$i} {
+            width: (8.333333333% * $i) + (0.000000001%);
+            }
+    }
+    @for $i from 4 through 7 {
+        .col-md-#{$i} {
+            width: (8.333333333% * $i) + (0.000000002%);
+        }
+    }
+    @for $i from 8 through 10 {
+        .col-md-#{$i} {
+            width: (8.333333333% * $i) + (0.000000003%);
+        }
+    }
+    @for $i from 11 through 12 {
+        .col-md-#{$i} {
+            width: (8.333333333% * $i) + (0.000000004%);
+        }
+    }
+    @for $i from 1 through 3 {
+        .offset-col-md-#{$i} {
+            @if ($i == 1 or $i == 2) {
+                width: 8.333333333% * $i;
+            }@else if ($i % 3 == 0){
+                width: (8.333333333% *$i) + (0.000000001%);
+            }
+        }
+    }
+}
+@media (max-width: 499px) {
+    @for $i from 1 through 3 {
+        .col-sm-#{$i} {
+            width: (8.333333333% * $i) + (0.000000001%);
+            }
+    }
+    @for $i from 4 through 7 {
+        .col-sm-#{$i} {
+            width: (8.333333333% * $i) + (0.000000002%);
+        }
+    }
+    @for $i from 8 through 10 {
+        .col-sm-#{$i} {
+            width: (8.333333333% * $i) + (0.000000003%);
+        }
+    }
+    @for $i from 11 through 12 {
+        .col-sm-#{$i} {
+            width: (8.333333333% * $i) + (0.000000004%);
+        }
+    }
+    @for $i from 1 through 3 {
+        .offset-col-sm-#{$i} {
+            @if ($i == 1 or $i == 2) {
+                width: 8.333333333% * $i;
+            }@else if ($i % 3 == 0){
+                width: (8.333333333% *$i) + (0.000000001%);
+            }
+        }
+    }
+}

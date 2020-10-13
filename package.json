@@ -1,0 +1,32 @@
+{
+  "name": "vef1-2020-v6",
+  "version": "1.0.0",
+  "description": "Nú er eigandi _Bókabúðarinnar_ kátur með útlitið en hefur áhyggjur af viðhaldi á vefnum.",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files \"*\"",
+    "sass-nomap": "node-sass styles.scss styles.css",
+    "sass": "node-sass --source-map-embed styles.scss styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch *.scss --recursive styles.css",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "lint": "stylelint styles.scss ./**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belikongur/vef1-2020-v6.git"
+  },
+  "author": "Abel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belikongur/vef1-2020-v6/issues"
+  },
+  "homepage": "https://github.com/belikongur/vef1-2020-v6#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "concurrently": "^5.3.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
